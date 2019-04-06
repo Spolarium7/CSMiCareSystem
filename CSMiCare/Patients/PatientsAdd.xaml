@@ -1,0 +1,26 @@
+﻿<Window x:Class="PatientsAdd" x:Name="PatientsAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSMiCare"
+        mc:Ignorable="d"
+        Title="Add Patient" Height="326.712" Width="752.74">
+    <Grid>
+        <Label x:Name="lblPatient" Content="New Patient" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
+        <TextBox x:Name="txtPatientFirstName" HorizontalAlignment="Left" Height="23" Margin="112,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+        <Label x:Name="lblPatientNameLabel" Content="Name" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
+        <TextBox x:Name="txtPatientLastName" HorizontalAlignment="Left" Height="23" Margin="418,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+        <Label x:Name="lblPatientNameLabel_Copy" Content="Date of Birth" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
+        <Calendar x:Name="calPatientDateOfBirth" HorizontalAlignment="Left" Margin="112,93,0,0" VerticalAlignment="Top" Width="178"/>
+        <Label x:Name="lblPatientGenderLabel" Content="Gender" HorizontalAlignment="Left" Margin="418,86,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
+        <ComboBox x:Name="cboPatientGender" HorizontalAlignment="Left" Margin="518,86,0,0" VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lblPatientTypeLabel" Content="Type" HorizontalAlignment="Left" Margin="418,113,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
+        <ComboBox x:Name="cboPatientType" HorizontalAlignment="Left" Margin="518,113,0,0" VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lblSchoolIdLabel" Content="School Id" HorizontalAlignment="Left" Margin="418,27,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
+        <TextBox x:Name="txtPatientSchoolId" HorizontalAlignment="Left" Height="23" Margin="518,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="453,250,0,0" VerticalAlignment="Top" Width="118"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="587,250,0,0" VerticalAlignment="Top" Width="118"/>
+
+    </Grid>
+</Window>

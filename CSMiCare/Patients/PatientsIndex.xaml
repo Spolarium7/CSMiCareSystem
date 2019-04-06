@@ -1,0 +1,42 @@
+﻿<Window x:Name="PatientsIndex" x:Class="PatientsIndex"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSMiCare"
+        mc:Ignorable="d"
+        Title="Patients" Height="499" Width="841">
+    <Grid>
+        <DataGrid x:Name="grPatients" HorizontalAlignment="Left" Height="293" Margin="10,63,0,0" VerticalAlignment="Top" Width="772" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="grPatientsFullName" Binding="{Binding FullName}"  CanUserSort="False" CanUserReorder="False" ClipboardContentBinding="{x:Null}" Header="Name" IsReadOnly="True"/>
+                <DataGridTextColumn x:Name="grPatientsAge" Binding="{Binding Age}"  CanUserSort="False" CanUserReorder="False" ClipboardContentBinding="{x:Null}" Header="Age" IsReadOnly="True"/>
+                <DataGridTextColumn x:Name="grPatientsGender" Binding="{Binding Gender}"  CanUserSort="False" CanUserReorder="False" ClipboardContentBinding="{x:Null}" Header="Gender" IsReadOnly="True"/>
+                <DataGridTextColumn x:Name="grPatientsType" Binding="{Binding Type}"  CanUserSort="False" CanUserReorder="False" ClipboardContentBinding="{x:Null}" Header="Type" IsReadOnly="True"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnEdit" Click="btnEdit_Click" Visibility="{Binding Edit}" Content="Edit"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnConfirmDelete" Click="btnConfirmDelete_Click" Visibility="{Binding ConfirmDeleteButton}" Content="Delete"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="New Patient" HorizontalAlignment="Left" Margin="654,27,0,0" VerticalAlignment="Top" Width="128" x:Name="btnNewPatient"/>
+        <Button x:Name="btnFirst" Content="|&lt;" HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Width="36" Height="38"/>
+        <Button x:Name="btnPrev" Content="&lt;" HorizontalAlignment="Left" Margin="51,375,0,0" VerticalAlignment="Top" Width="36" Height="38"/>
+        <Label x:Name="lblPageDescription" Content="Label" HorizontalAlignment="Left" Margin="92,381,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="btnNext" Content="&gt;" HorizontalAlignment="Left" Margin="171,375,0,0" VerticalAlignment="Top" Width="36" Height="38"/>
+        <Button x:Name="btnLast" Content="&gt;|" HorizontalAlignment="Left" Margin="212,375,0,0" VerticalAlignment="Top" Width="36" Height="38"/>
+        <Label Content="Search" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="60,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="361" x:Name="txtSearch" KeyDown="txtSearch_KeyDown"/>
+
+    </Grid>
+</Window>
